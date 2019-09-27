@@ -27,7 +27,7 @@ def loadSnapshot(path):
 
     with open(path, 'rb') as f:
         try:
-            model = pickle.load(f, encoding='bytes') 
+            model = pickle.load(f, encoding='latin1') 
         except:
             model = pickle.load(f) 
 

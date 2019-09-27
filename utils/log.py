@@ -1,3 +1,4 @@
+from __future__ import print_function
 import sys
 
 log = ''
@@ -7,13 +8,13 @@ def show(s, new_line=True, discard=False):
 
     if isinstance(s, (list, tuple)):
         for i in range(len(s)):
-            print(s[i]),
+            print(s[i], end=''),
             if not discard:
                 log += str(s[i])
                 if i < len(s) - 1:
                     log += ' '
     else:
-        print(s),
+        print(s, end=''),
         if not discard:
             log += str(s)
 

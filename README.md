@@ -35,7 +35,7 @@ pip install –r requirements.txt
 3. Librosa required audio backend (FFMPEG):
 
 ```
-apt-get install ffmpeg
+sudo apt-get install ffmpeg
 ```
 
 4. Download model snapshot (300 MB):
@@ -49,9 +49,16 @@ sh model/fetch_model.sh
 ```
 pip install -r https://raw.githubusercontent.com/Lasagne/Lasagne/master/requirements.txt
 pip install https://github.com/Lasagne/Lasagne/archive/master.zip
+sudo apt-get install libblas-dev liblapack-dev
 ```
 
-<i>You might have to add 'sudo' in front of each command when admin privileges are required.</i>
+6. Install BLAS:
+
+```
+sudo apt-get install libblas-dev liblapack-dev
+```
+
+<i>You might have to add 'sudo' in front of the 'pip' command when admin privileges are required.</i>
 
 ## Usage
 BirdNET is an artificial neural network that can detect bird vocalizations in lengthy audio files. This implementation runs in CPU-mode and does not require specialized hardware. A number of optional settings can be provided when executing the analysis script. Here are some examples for basic usage:
