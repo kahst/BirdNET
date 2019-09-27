@@ -17,7 +17,7 @@ E-Mail: stefan.kahl@informatik.tu-chemnitz.de
 This project is licensed under the terms of the MIT license.
 
 ## Installation
-This is a Theano/Lasagne implementation in Python for the identification of hundreds of bird species based on their vocalizations. This code is tested using Ubuntu 16.04 LTS but should work with other distributions as well.
+This is a Theano/Lasagne implementation in Python for the identification of hundreds of bird species based on their vocalizations. This code is tested using Ubuntu 18.04 LTS but should work with other distributions as well. Python 2 and 3 are supported.
 
 1. Clone the repository:
 
@@ -49,7 +49,6 @@ sh model/fetch_model.sh
 ```
 pip install -r https://raw.githubusercontent.com/Lasagne/Lasagne/master/requirements.txt
 pip install https://github.com/Lasagne/Lasagne/archive/master.zip
-sudo apt-get install libblas-dev liblapack-dev
 ```
 
 6. Install BLAS:

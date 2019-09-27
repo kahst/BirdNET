@@ -196,7 +196,7 @@ def splitSignal(sig, rate, seconds, overlap, minlen):
 
     # Split signal with overlap
     sig_splits = []
-    for i in xrange(0, len(sig), int((seconds - overlap) * rate)):
+    for i in range(0, len(sig), int((seconds - overlap) * rate)):
         split = sig[i:i + int(seconds * rate)]
 
         # End of signal?
