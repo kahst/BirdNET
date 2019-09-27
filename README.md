@@ -1,7 +1,7 @@
 # BirdNET
-Soundscape analysis with BirdNET. For more information regarding the project visit: https://birdnet.cornell.edu/
-
 By [Stefan Kahl](https://github.com/kahst), [Shyam Madhusudhana](https://www.birds.cornell.edu/brp/shyam-madhusudhana/), and [Holger Klinck](https://www.birds.cornell.edu/brp/holger-klinck/)
+
+Soundscape analysis with BirdNET. For more information regarding the project visit: https://birdnet.cornell.edu/
 
 ## Introduction
 How can computers learn to recognize birds from sounds? The Cornell Lab of Ornithology and the Chemnitz University of Technology are trying to find an answer to this question. Our research is mainly focused on the detection and classification of avian sounds using machine learning – we want to assist experts and citizen scientist in their work of monitoring and protecting our birds.
@@ -32,7 +32,7 @@ cd BirdNET
 pip install –r requirements.txt
 ```
 
-3. Librosa required audio backend
+3. Librosa required audio backend:
 
 ```
 apt-get install libav-tools
@@ -81,3 +81,5 @@ The input arguments include:
 --overlap: Overlap in seconds between extracted spectrograms. Values in [0.0, 2.9].
 --sensitivity: Sigmoid sensitivity; Higher values result in lower sensitivity. Values in [0.25, 2.0]. Defaults to 1.0.
 ```
+
+Output formats support Raven and Audacity, but both formats are text-based and machine-readable.
