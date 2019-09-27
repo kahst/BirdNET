@@ -26,7 +26,10 @@ def loadSnapshot(path):
     log.p(('LOADING SNAPSHOT', path.split(os.sep)[-1], '...'), new_line=False)
 
     with open(path, 'rb') as f:
-        model = pickle.load(f)
+        try:
+            model = pickle.load(f, encoding='bytes') 
+        except:
+            model = pickle.load(f) 
 
     cfg.setModelSettings(model)
 
