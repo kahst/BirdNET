@@ -59,6 +59,32 @@ sudo apt-get install libblas-dev liblapack-dev
 
 <i>You might have to add 'sudo' in front of the 'pip' command when admin privileges are required.</i>
 
+7. Install GPU support (optional, but significantly faster):
+
+Before you can install pygpu/libgpuarray you need to install [CUDA](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html) and [cuDNN](https://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html) first: 
+
+```
+git clone https://github.com/Theano/libgpuarray.git
+cd libgpuarray
+
+cd <dir>
+mkdir Build
+cd Build
+cmake .. -DCMAKE_BUILD_TYPE=Release
+make
+make install
+cd ..
+
+python setup.py build
+python setup.py install
+
+sudo ldconfig
+```
+
+<i>Again, you might need to add 'sudo' before 'make' if admin privileges are required.
+
+Please refer to the [Theano](http://deeplearning.net/software/theano/install_ubuntu.html) and [pygpu](http://deeplearning.net/software/libgpuarray/installation.html#step-by-step-install) install instructions if you encounter errors during install or execution.</i>
+
 ## Usage
 BirdNET is an artificial neural network that can detect bird vocalizations in lengthy audio files. This implementation runs in CPU-mode and does not require specialized hardware. A number of optional settings can be provided when executing the analysis script. Here are some examples for basic usage:
 
