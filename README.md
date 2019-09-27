@@ -32,10 +32,10 @@ cd BirdNET
 pip install –r requirements.txt
 ```
 
-3. Librosa required audio backend:
+3. Librosa required audio backend (FFMPEG):
 
 ```
-apt-get install libav-tools
+apt-get install ffmpeg
 ```
 
 4. Download model snapshot (300 MB):
