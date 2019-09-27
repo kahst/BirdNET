@@ -8,13 +8,13 @@ def show(s, new_line=True, discard=False):
 
     if isinstance(s, (list, tuple)):
         for i in range(len(s)):
-            print(s[i], end=''),
+            print(s[i], end=' '),
             if not discard:
                 log += str(s[i])
                 if i < len(s) - 1:
                     log += ' '
     else:
-        print(s, end=''),
+        print(s, end=' '),
         if not discard:
             log += str(s)
 
