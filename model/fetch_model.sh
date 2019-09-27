@@ -1,0 +1,1 @@
+wget https://tuc.cloud/index.php/s/m9smX4FkqmJaxLW -O BirdNET_Soundscape_Model.pkl
