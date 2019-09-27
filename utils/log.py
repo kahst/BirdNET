@@ -7,18 +7,18 @@ def show(s, new_line=True, discard=False):
 
     if isinstance(s, (list, tuple)):
         for i in range(len(s)):
-            print s[i],
+            print(s[i]),
             if not discard:
                 log += str(s[i])
                 if i < len(s) - 1:
                     log += ' '
     else:
-        print s,
+        print(s),
         if not discard:
             log += str(s)
 
     if new_line:
-        print ''
+        print('')
         if not discard:
             log += '\n'
     else:
