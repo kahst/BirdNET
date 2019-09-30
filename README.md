@@ -10,7 +10,7 @@ This repository provides the basic BirdNET recognition system to detect avian vo
 
 <b>If you have any questions or problems running the scripts, don't hesitate to contact us.</b>
 
-Contact:  [Stefan Kahl](https://github.com/kahst), [Technische Universität Chemnitz](https://www.tu-chemnitz.de/index.html.en), [Media Informatics](https://www.tu-chemnitz.de/informatik/Medieninformatik/index.php.en)
+Contact:  [Stefan Kahl](https://github.com/kahst), [Chemnitz University of Technology](https://www.tu-chemnitz.de/index.html.en), [Media Informatics](https://www.tu-chemnitz.de/informatik/Medieninformatik/index.php.en)
 
 E-Mail: stefan.kahl@informatik.tu-chemnitz.de
 
@@ -116,3 +116,9 @@ The input arguments include:
 ```
 
 Output formats support Raven and Audacity, but both formats are text-based and machine-readable.
+
+## Sponsors
+
+This project is supported by Jake Holshuh (Cornell class of ’66). The Arthur Vining Davis Foundations also kindly support our efforts.
+
+The European Union and the European Social Fund for Germany partially funded this research. This work was also partially funded by the German Federal Ministry of Education and Research in the program of Entrepreneurial Regions InnoProfileTransfer in the project group localizeIT (funding code 03IPT608X)
