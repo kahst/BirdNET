@@ -31,7 +31,7 @@ git clone https://github.com/kahst/BirdNET.git
 cd BirdNET
 pip install –r requirements.txt
 ```
-These versions are known to work: NumPy 1.14.5, SciPy 1.0.0, Librosa 0.7.0, Future 0.17.1 
+<i>You might need to add the full path to the requirements.txt in case pip throws an error: 'pip install -r /path/to/requirements.txt'. These versions are known to work: NumPy 1.14.5, SciPy 1.0.0, Librosa 0.7.0, Future 0.17.1</i>
 
 3. Librosa required audio backend (FFMPEG):
 
