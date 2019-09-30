@@ -1,7 +1,7 @@
-# BirdNET
+# BirdNET Soundscape Analysis
 By [Stefan Kahl](https://github.com/kahst), [Shyam Madhusudhana](https://www.birds.cornell.edu/brp/shyam-madhusudhana/), and [Holger Klinck](https://www.birds.cornell.edu/brp/holger-klinck/)
 
-Soundscape analysis with BirdNET. For more information regarding the project visit: https://birdnet.cornell.edu/
+For more information regarding the project visit: https://birdnet.cornell.edu/
 
 ## Introduction
 How can computers learn to recognize birds from sounds? The Cornell Lab of Ornithology and the Chemnitz University of Technology are trying to find an answer to this question. Our research is mainly focused on the detection and classification of avian sounds using machine learning – we want to assist experts and citizen scientist in their work of monitoring and protecting our birds.
@@ -31,7 +31,7 @@ git clone https://github.com/kahst/BirdNET.git
 cd BirdNET
 pip install –r requirements.txt
 ```
-<i>You might need to add the full path to the requirements.txt in case pip throws an error: 'pip install -r /path/to/requirements.txt'. These versions are known to work: NumPy 1.14.5, SciPy 1.0.0, Librosa 0.7.0, Future 0.17.1</i>
+<i>You might need to add the full path to the requirements.txt in case pip throws an error: </i>'pip install -r /path/to/requirements.txt'. <i>These versions of required packages are known to work: NumPy 1.14.5, SciPy 1.0.0, Librosa 0.7.0, Future 0.17.1</i>
 
 3. Librosa required audio backend (FFMPEG):
 
@@ -62,7 +62,7 @@ sudo apt-get install libblas-dev liblapack-dev
 
 7. Install GPU support (optional, but significantly faster):
 
-Before you can install pygpu/libgpuarray you need to install [CUDA](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html) and [cuDNN](https://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html) first: 
+Before installing <i>libgpuarray</i>, you need to install [CUDA](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html) and [cuDNN](https://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html) first: 
 
 ```
 git clone https://github.com/Theano/libgpuarray.git
@@ -82,12 +82,12 @@ python setup.py install
 sudo ldconfig
 ```
 
-<i>Again, you might need to add 'sudo' before 'make' if admin privileges are required.
+<i>Again, you might need to add 'sudo' before install commands if admin privileges are required.
 
-Please refer to the [Theano](http://deeplearning.net/software/theano/install_ubuntu.html) and [pygpu](http://deeplearning.net/software/libgpuarray/installation.html#step-by-step-install) install instructions if you encounter errors during install or execution.</i>
+Please refer to the [Theano](http://deeplearning.net/software/theano/install_ubuntu.html) and [libgpuarray](http://deeplearning.net/software/libgpuarray/installation.html#step-by-step-install) install instructions if you encounter errors during install or execution.</i>
 
 ## Usage
-BirdNET is an artificial neural network that can detect bird vocalizations in lengthy audio files. This implementation runs in CPU-mode and does not require specialized hardware. A number of optional settings can be provided when executing the analysis script. Here are some examples for basic usage:
+BirdNET is an artificial neural network that can detect bird vocalizations in field recordings. This implementation runs in CPU-mode and does not require specialized hardware (you can run the script in GPU mode if you have a CUDA-enabled GPU available). A number of optional settings can be provided when executing the analysis script. Here are some examples for basic usage:
 
 Analyze all '.wav'-files in a directory:
 
