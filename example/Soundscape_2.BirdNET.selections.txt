@@ -1,9 +1,0 @@
-Selection	View	Channel	Begin File	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Species Code	Common Name	Confidence
-1	Spectrogram 1	1	Soundscape_2.wav	12.0	15.0	150	15000	yebsap	Yellow-bellied Sapsucker	0.42704433
-2	Spectrogram 1	1	Soundscape_2.wav	12.0	15.0	150	15000	haiwoo	Hairy Woodpecker	0.1125633
-3	Spectrogram 1	1	Soundscape_2.wav	15.0	18.0	150	15000	whbnut	White-breasted Nuthatch	0.23805508
-4	Spectrogram 1	1	Soundscape_2.wav	24.0	27.0	150	15000	whbnut	White-breasted Nuthatch	0.44427413
-5	Spectrogram 1	1	Soundscape_2.wav	36.0	39.0	150	15000	whbnut	White-breasted Nuthatch	0.12764573
-6	Spectrogram 1	1	Soundscape_2.wav	39.0	42.0	150	15000	whbnut	White-breasted Nuthatch	0.7723971
-7	Spectrogram 1	1	Soundscape_2.wav	45.0	48.0	150	15000	whbnut	White-breasted Nuthatch	0.37127143
-8	Spectrogram 1	1	Soundscape_2.wav	9.0	12.0	150	15000	yebsap	Yellow-bellied Sapsucker	0.6974225

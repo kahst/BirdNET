@@ -17,7 +17,7 @@ E-Mail: stefan.kahl@informatik.tu-chemnitz.de
 This project is licensed under the terms of the MIT license.
 
 ## Installation
-This is a Theano/Lasagne implementation in Python for the identification of hundreds of bird species based on their vocalizations. This code is tested using Ubuntu 18.04 LTS but should work with other distributions as well. Python 2 and 3 are supported.
+This is a Theano/Lasagne implementation in Python for the identification of hundreds of bird species based on their vocalizations. This code is tested using Ubuntu 18.04 LTS but should work with other distributions as well. Python 2 and 3 are supported. See <i>Installation (Docker)</i> to install BirdNET inside a docker container.
 
 1. Clone the repository:
 
@@ -95,8 +95,24 @@ sudo ldconfig
 
 Please refer to the [Theano](http://deeplearning.net/software/theano/install_ubuntu.html) and [libgpuarray](http://deeplearning.net/software/libgpuarray/installation.html#step-by-step-install) install instructions if you encounter errors during install or execution.</i>
 
+## Installation (Docker)
+
+First, you need to install docker. You can follow the official [install guide](https://docs.docker.com/v17.09/engine/installation/) or run:
+
+```
+sudo apt install docker.io
+```
+
+After that, build the BirdNET docker container with:
+
+```
+sudo docker build -t birdnet .
+```
+
+When finished, you can run the container and start the analysis in CPU mode (see Usage (Docker)).
+
 ## Usage
-BirdNET is an artificial neural network that can detect bird vocalizations in field recordings. This implementation runs in CPU-mode and does not require specialized hardware (you can run the script in GPU mode if you have a CUDA-enabled GPU available). A number of optional settings can be provided when executing the analysis script. Here are some examples for basic usage:
+BirdNET is an artificial neural network that can detect bird vocalizations in field recordings. This implementation runs in CPU mode and does not require specialized hardware (you can run the script in GPU mode if you have a CUDA-enabled GPU available). A number of optional settings can be provided when executing the analysis script. Here are some examples for basic usage:
 
 Analyze all '.wav'-files in a directory:
 
@@ -125,6 +141,22 @@ The input arguments include:
 ```
 
 Output formats support Raven and Audacity, but both formats are text-based and machine-readable.
+
+## Usage (Docker)
+
+In order to pass a directory that contains audio files to the docker file, you need to mount it inside the container with <i>-v /my/path:/mount/path</i> before you can run the container. You can run the container for the provided example soundscapes with:
+
+```
+sudo docker run -v $PWD/example:/audio birdnet --i audio
+```
+
+You can adjust the directory that contains your recordings by providing an absolute path:
+
+```
+sudo docker run -v /path/to/your/audio/files:/audio birdnet --i audio
+```
+
+You can pass all aforementioned command line arguments (e.g. lat, lon, week) to the analysis script when starting the docker container.
 
 ## Sponsors
 

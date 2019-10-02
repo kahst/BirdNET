@@ -240,7 +240,7 @@ def process(soundscape, sid, out_dir, out_type, test_function):
 def main():
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--i', required=True, help='Path to input file or directory.')
+    parser.add_argument('--i', default='audio', help='Path to input file or directory.')
     parser.add_argument('--o', default='', help='Path to output directory. If not specified, the input directory will be used.')
     parser.add_argument('--filetype', default='wav', help='Filetype of soundscape recordings. Defaults to \'wav\'.')
     parser.add_argument('--results', default='raven', help='Output format of analysis results. Values in [\'audacity\', \'raven\']. Defaults to \'raven\'.')
