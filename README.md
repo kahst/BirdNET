@@ -100,12 +100,14 @@ Please refer to the [Theano](http://deeplearning.net/software/theano/install_ubu
 First, you need to install docker. You can follow the official [install guide](https://docs.docker.com/v17.09/engine/installation/) or run:
 
 ```
-sudo apt install docker.io
+sudo apt install docker.ce
 ```
 
-After that, build the BirdNET docker container with:
+After that, clone the repository and build the BirdNET docker container with:
 
 ```
+git clone https://github.com/kahst/BirdNET.git
+cd BirdNET
 sudo docker build -t birdnet .
 ```
 
@@ -156,7 +158,13 @@ You can adjust the directory that contains your recordings by providing an absol
 sudo docker run -v /path/to/your/audio/files:/audio birdnet --i audio
 ```
 
-You can pass all aforementioned command line arguments (e.g. lat, lon, week) to the analysis script when starting the docker container.
+You can pass all aforementioned command line arguments (e.g. lat, lon, week) to the analysis script when starting the docker container:
+
+```
+sudo docker run -v /path/to/your/audio/files:/audio birdnet --i audio --lat 42.479 --lon -76.451 --week 12
+```
+
+<i>You might not need 'sudo' before 'docker run' if your user is member of the docker group</i>
 
 ## Sponsors
 
