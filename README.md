@@ -62,7 +62,16 @@ sudo apt-get install libblas-dev liblapack-dev
 
 7. Install GPU support (optional, but significantly faster):
 
-Before installing <i>libgpuarray</i>, you need to install [CUDA](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html) and [cuDNN](https://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html) first: 
+Before installing <i>libgpuarray</i>, you need to install [CUDA](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html) and [cuDNN](https://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html).
+
+You also might need to install Cython and cmake:
+
+```
+sudo apt-get install cmake
+pip install Cython 
+```
+
+After that, you can install libgpuarray with:
 
 ```
 git clone https://github.com/Theano/libgpuarray.git
