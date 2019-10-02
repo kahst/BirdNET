@@ -100,7 +100,7 @@ Please refer to the [Theano](http://deeplearning.net/software/theano/install_ubu
 First, you need to install docker. You can follow the official [install guide](https://docs.docker.com/v17.09/engine/installation/) or run:
 
 ```
-sudo apt install docker.ce
+sudo apt-get install docker.ce
 ```
 
 After that, clone the repository and build the BirdNET docker container with:
@@ -168,6 +168,6 @@ sudo docker run -v /path/to/your/audio/files:/audio birdnet --i audio --lat 42.4
 
 ## Sponsors
 
-This project is supported by Jake Holshuh (Cornell class of ’66). The Arthur Vining Davis Foundations also kindly support our efforts.
+This project is supported by Jake Holshuh (Cornell class of ’69). The Arthur Vining Davis Foundations also kindly support our efforts.
 
 The European Union and the European Social Fund for Germany partially funded this research. This work was also partially funded by the German Federal Ministry of Education and Research in the program of Entrepreneurial Regions InnoProfileTransfer in the project group localizeIT (funding code 03IPT608X)

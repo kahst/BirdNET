@@ -5,7 +5,7 @@ FROM python:3.7-slim
 RUN apt-get update && apt-get install -y --no-install-recommends git ffmpeg build-essential gfortran libblas-dev liblapack-dev && rm -rf /var/lib/apt/lists/*
 
 # Install required Python packages
-RUN pip install librosa future
+RUN pip install numpy scipy librosa future
 
 # Install Theano and Lasagne
 RUN pip install -r https://raw.githubusercontent.com/Lasagne/Lasagne/master/requirements.txt
