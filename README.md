@@ -113,7 +113,7 @@ sudo docker build -t birdnet .
 
 When finished, you can run the container and start the analysis in CPU mode (see Usage (Docker)).
 
-If you want to use our GPU docker image to run BirdNET in GPU mode, you need to install </i>nvidia-docker<i> before building the <i>Dockerfile-GPU</i>:
+If you want to use our GPU docker image to run BirdNET in GPU mode, you need to install <i>nvidia-docker</i> before building the <i>Dockerfile-GPU</i>:
 
 ```
 sudo apt-get install nvidia-docker
