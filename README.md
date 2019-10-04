@@ -100,7 +100,14 @@ Please refer to the [Theano](http://deeplearning.net/software/theano/install_ubu
 First, you need to install docker. You can follow the official [install guide](https://docs.docker.com/v17.09/engine/installation/) or run:
 
 ```
-sudo apt-get install docker.ce
+sudo apt-get update
+
+sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+
+sudo apt-get update
+sudo apt-get install docker-ce
 ```
 
 After that, clone the repository and build the BirdNET docker container with:
@@ -113,11 +120,21 @@ sudo docker build -t birdnet .
 
 When finished, you can run the container and start the analysis in CPU mode (see Usage (Docker)).
 
-If you want to use our GPU docker image to run BirdNET in GPU mode, you need to install <i>nvidia-docker</i> before building the <i>Dockerfile-GPU</i>:
+If you want to use our GPU docker image to run BirdNET in GPU mode, you need to install <i>nvidia-docker</i> before building the <i>Dockerfile-GPU</i>. Follow the official [install guide](https://github.com/NVIDIA/nvidia-docker) or run:
 
 ```
-sudo apt-get install nvidia-docker
-sudo nvidia-docker build -f Dockerfile-GPU -t birdnet-gpu .
+distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
+curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
+curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
+
+sudo apt-get update && sudo apt-get install -y nvidia-container-toolkit
+sudo systemctl restart docker
+```
+
+After that, build the GPU image with:
+
+```
+sudo docker build -f Dockerfile-GPU -t birdnet-gpu .
 ```
 
 All you need are GPU drivers that support CUDA 9.2 or higher. You do not need to install CUDA or cuDNN on the host system.
@@ -173,10 +190,10 @@ You can pass all aforementioned command line arguments (e.g. lat, lon, week) to 
 sudo docker run -v /path/to/your/audio/files:/audio birdnet --i audio --lat 42.479 --lon -76.451 --week 12
 ```
 
-If you built the GPU docker image, you can run the analysis in GPU mode by using <i>nvidia-docker</i> instead:
+If you built the GPU docker image, you can run the analysis in GPU mode by using <i>docker run --gpus all</i> instead:
 
 ```
-sudo nvidia-docker run -v /path/to/your/audio/files:/audio birdnet-gpu --i audio --lat 42.479 --lon -76.451 --week 12
+sudo docker run --gpus all -v /path/to/your/audio/files:/audio birdnet-gpu --i audio --lat 42.479 --lon -76.451 --week 12
 ```
 
 <i>You might not need 'sudo' before 'docker run' if your user is member of the docker group</i>
