@@ -1,0 +1,39 @@
+Selection	View	Channel	Begin File	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Species Code	Common Name	Confidence
+1	Spectrogram 1	1	Soundscape_1.wav	12.0	15.0	150	15000	norcar	Northern Cardinal	0.9341163
+2	Spectrogram 1	1	Soundscape_1.wav	15.0	18.0	150	15000	rewbla	Red-winged Blackbird	0.6139876
+3	Spectrogram 1	1	Soundscape_1.wav	15.0	18.0	150	15000	orcori	Orchard Oriole	0.27926543
+4	Spectrogram 1	1	Soundscape_1.wav	15.0	18.0	150	15000	easblu	Eastern Bluebird	0.10946065
+5	Spectrogram 1	1	Soundscape_1.wav	18.0	21.0	150	15000	rewbla	Red-winged Blackbird	0.35700652
+6	Spectrogram 1	1	Soundscape_1.wav	18.0	21.0	150	15000	boboli	Bobolink	0.21690185
+7	Spectrogram 1	1	Soundscape_1.wav	21.0	24.0	150	15000	norcar	Northern Cardinal	0.9903307
+8	Spectrogram 1	1	Soundscape_1.wav	24.0	27.0	150	15000	norcar	Northern Cardinal	0.69601476
+9	Spectrogram 1	1	Soundscape_1.wav	27.0	30.0	150	15000	rewbla	Red-winged Blackbird	0.14577128
+10	Spectrogram 1	1	Soundscape_1.wav	27.0	30.0	150	15000	swaspa	Swamp Sparrow	0.11328873
+11	Spectrogram 1	1	Soundscape_1.wav	27.0	30.0	150	15000	amebit	American Bittern	0.10448217
+12	Spectrogram 1	1	Soundscape_1.wav	3.0	6.0	150	15000	norcar	Northern Cardinal	0.9802532
+13	Spectrogram 1	1	Soundscape_1.wav	30.0	33.0	150	15000	orcori	Orchard Oriole	0.5008594
+14	Spectrogram 1	1	Soundscape_1.wav	30.0	33.0	150	15000	rewbla	Red-winged Blackbird	0.32236516
+15	Spectrogram 1	1	Soundscape_1.wav	30.0	33.0	150	15000	heptan	Hepatic Tanager	0.10147259
+16	Spectrogram 1	1	Soundscape_1.wav	33.0	36.0	150	15000	norcar	Northern Cardinal	0.9690186
+17	Spectrogram 1	1	Soundscape_1.wav	36.0	39.0	150	15000	norcar	Northern Cardinal	0.86676806
+18	Spectrogram 1	1	Soundscape_1.wav	36.0	39.0	150	15000	dowwoo	Downy Woodpecker	0.13147369
+19	Spectrogram 1	1	Soundscape_1.wav	39.0	42.0	150	15000	dowwoo	Downy Woodpecker	0.70051867
+20	Spectrogram 1	1	Soundscape_1.wav	39.0	42.0	150	15000	ettwoo1	Eurasian Three-toed Woodpecker	0.14408669
+21	Spectrogram 1	1	Soundscape_1.wav	42.0	45.0	150	15000	dowwoo	Downy Woodpecker	0.74466515
+22	Spectrogram 1	1	Soundscape_1.wav	42.0	45.0	150	15000	recwoo	Red-cockaded Woodpecker	0.43577012
+23	Spectrogram 1	1	Soundscape_1.wav	42.0	45.0	150	15000	leswoo1	Lesser Spotted Woodpecker	0.1541512
+24	Spectrogram 1	1	Soundscape_1.wav	45.0	48.0	150	15000	euptit1	Eurasian Penduline-Tit	0.93278193
+25	Spectrogram 1	1	Soundscape_1.wav	48.0	51.0	150	15000	norcar	Northern Cardinal	0.7822608
+26	Spectrogram 1	1	Soundscape_1.wav	48.0	51.0	150	15000	hoomer	Hooded Merganser	0.109664775
+27	Spectrogram 1	1	Soundscape_1.wav	51.0	54.0	150	15000	rewbla	Red-winged Blackbird	0.19445287
+28	Spectrogram 1	1	Soundscape_1.wav	51.0	54.0	150	15000	swaspa	Swamp Sparrow	0.17175889
+29	Spectrogram 1	1	Soundscape_1.wav	51.0	54.0	150	15000	sonspa	Song Sparrow	0.1086661
+30	Spectrogram 1	1	Soundscape_1.wav	54.0	57.0	150	15000	dowwoo	Downy Woodpecker	0.8768537
+31	Spectrogram 1	1	Soundscape_1.wav	54.0	57.0	150	15000	attwoo1	American Three-toed Woodpecker	0.10957377
+32	Spectrogram 1	1	Soundscape_1.wav	57.0	60.0	150	15000	rewbla	Red-winged Blackbird	0.8829631
+33	Spectrogram 1	1	Soundscape_1.wav	57.0	60.0	150	15000	rusbla	Rusty Blackbird	0.20939858
+34	Spectrogram 1	1	Soundscape_1.wav	57.0	60.0	150	15000	orcori	Orchard Oriole	0.1480306
+35	Spectrogram 1	1	Soundscape_1.wav	6.0	9.0	150	15000	rewbla	Red-winged Blackbird	0.26296026
+36	Spectrogram 1	1	Soundscape_1.wav	6.0	9.0	150	15000	swaspa	Swamp Sparrow	0.112547934
+37	Spectrogram 1	1	Soundscape_1.wav	9.0	12.0	150	15000	norcar	Northern Cardinal	0.98011315
+38	Spectrogram 1	1	Soundscape_1.wav	0.0	3.0	150	15000	norcar	Northern Cardinal	0.9515138

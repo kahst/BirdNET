@@ -113,6 +113,15 @@ sudo docker build -t birdnet .
 
 When finished, you can run the container and start the analysis in CPU mode (see Usage (Docker)).
 
+If you want to use our GPU docker image to run BirdNET in GPU mode, you need to install </i>nvidia-docker<i> before building the <i>Dockerfile-GPU</i>:
+
+```
+sudo apt-get install nvidia-docker
+sudo nvidia-docker build -f Dockerfile-GPU -t birdnet-gpu .
+```
+
+All you need are GPU drivers that support CUDA 9.2 or higher. You do not need to install CUDA or cuDNN on the host system.
+
 ## Usage
 BirdNET is an artificial neural network that can detect bird vocalizations in field recordings. This implementation runs in CPU mode and does not require specialized hardware (you can run the script in GPU mode if you have a CUDA-enabled GPU available). A number of optional settings can be provided when executing the analysis script. Here are some examples for basic usage:
 
@@ -162,6 +171,12 @@ You can pass all aforementioned command line arguments (e.g. lat, lon, week) to 
 
 ```
 sudo docker run -v /path/to/your/audio/files:/audio birdnet --i audio --lat 42.479 --lon -76.451 --week 12
+```
+
+If you built the GPU docker image, you can run the analysis in GPU mode by using <i>nvidia-docker</i> instead:
+
+```
+sudo nvidia-docker run -v /path/to/your/audio/files:/audio birdnet-gpu --i audio --lat 42.479 --lon -76.451 --week 12
 ```
 
 <i>You might not need 'sudo' before 'docker run' if your user is member of the docker group</i>
