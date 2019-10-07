@@ -31,7 +31,14 @@ git clone https://github.com/kahst/BirdNET.git
 cd BirdNET
 pip install –r requirements.txt
 ```
-<i>You might need to add the full path to the requirements.txt in case pip throws an error: </i>'pip install -r /path/to/requirements.txt'. <i>These versions of required packages are known to work: NumPy 1.14.5, SciPy 1.0.0, Librosa 0.7.0, Future 0.17.1</i>
+
+You might need to add the full path to the requirements.txt in case pip throws an error:
+
+```
+pip install -r /path/to/requirements.txt
+```
+
+<i>These versions of required packages are known to work: NumPy 1.14.5, SciPy 1.0.0, Librosa 0.7.0, Future 0.17.1</i>
 
 3. Librosa required audio backend (FFMPEG):
 
@@ -172,7 +179,9 @@ Output formats support Raven and Audacity, but both formats are text-based and m
 
 ## Usage (Docker)
 
-In order to pass a directory that contains audio files to the docker file, you need to mount it inside the container with <i>-v /my/path:/mount/path</i> before you can run the container. You can run the container for the provided example soundscapes with:
+In order to pass a directory that contains your audio files to the docker file, you need to mount it inside the docker container with <i>-v /my/path:/mount/path</i> before you can run the container. 
+
+You can run the container for the provided example soundscapes with:
 
 ```
 sudo docker run -v $PWD/example:/audio birdnet --i audio
