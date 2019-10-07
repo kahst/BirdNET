@@ -98,10 +98,10 @@ def resblock(net_in, filters, kernel_size, stride=1, preactivated=True, block_id
     # Dropout Layer
     net = l.DropoutLayer(net)        
 
-    # Second Convolution (make 1x1 if downsample block)
+    # Second Convolution
     net = l.batch_norm(l.Conv2DLayer(net,
                         num_filters=filters,
-                        filter_size=k_size,
+                        filter_size=kernel_size,
                         pad='same',
                         stride=1,
                         nonlinearity=None))
