@@ -3,12 +3,12 @@
 # of 0.02 means that a species must occur on at least 2% of all checklists
 # for a location to be considered plausible.
 EBIRD_SPECIES_CODES = 'metadata/eBird_taxonomy_codes_2018.json'
-EBIRD_MDATA = 'metadata/eBird_grid_data_step5.pkl'
+EBIRD_MDATA = 'metadata/eBird_grid_data_weekly.gz'
 USE_EBIRD_CHECKLIST = True
 EBIRD_THRESHOLD = 0.02
 DEPLOYMENT_LOCATION = (-1, -1)
 DEPLOYMENT_WEEK = -1
-GRID_STEP_SIZE = 2.5
+GRID_STEP_SIZE = 0.25
 
 # We use 3-second spectrograms to identify avian vocalizations.
 # You can specify the overlap of consecutive spectrograms and the minimum
