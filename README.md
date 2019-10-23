@@ -3,6 +3,17 @@ By [Stefan Kahl](https://github.com/kahst), [Shyam Madhusudhana](https://www.bir
 
 For more information regarding the project visit: https://birdnet.cornell.edu/
 
+Please cite as (PDF coming soon):
+
+```
+@phdthesis{kahl2019identifying,
+  title={{Identifying Birds by Sound: Large-scale Acoustic Event Recognition for Avian Activity Monitoring}},
+  author={Kahl, Stefan},
+  year={2019},
+  school={Chemnitz University of Technology}
+}
+```
+
 ## Introduction
 How can computers learn to recognize birds from sounds? The Cornell Lab of Ornithology and the Chemnitz University of Technology are trying to find an answer to this question. Our research is mainly focused on the detection and classification of avian sounds using machine learning – we want to assist experts and citizen scientist in their work of monitoring and protecting our birds.
 
