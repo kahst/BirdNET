@@ -20,8 +20,7 @@ def parseTestSet(path, file_type='wav'):
         dataset.append(path)
     else:
         for dirpath, _, filenames in os.walk(path):
-            for f in filenames:            
-                day = f.split('_')[-2]
+            for f in filenames:
                 if f.rsplit('.', 1)[-1].lower() == file_type:
                     dataset.append(os.path.abspath(os.path.join(dirpath, f)))
 
