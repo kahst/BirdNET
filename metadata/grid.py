@@ -13,25 +13,33 @@ from utils import log
 ##################### GLOBAL VARS #######################
 GRID = []
 CODES = []
+STEP = 0.25
 
 ###################### LOAD DATA ########################
 def load():
 
     global GRID
     global CODES
+    global STEP
 
     if len(GRID) == 0:
 
         # Status
         log.p('LOADING eBIRD GRID DATA...', new_line=False)
 
-        # Load pickled grid data
-        with gzip.open(cfg.EBIRD_MDATA, 'rt') as pfile:
-            GRID = json.load(pfile)
+        # Load pickled or zipped grid data
+        if cfg.EBIRD_MDATA.rsplit('.', 1)[-1] == 'gz':
+            with gzip.open(cfg.EBIRD_MDATA, 'rt') as pfile:
+                GRID = json.load(pfile)
+        else:
+            with open(cfg.EBIRD_MDATA, 'rb') as pfile:
+                GRID = pickle.load(pfile)
 
         # Load species codes
         with open(cfg.EBIRD_SPECIES_CODES, 'r') as jfile:
             CODES = json.load(jfile)
+
+        STEP = cfg.GRID_STEP_SIZE
 
         log.p(('DONE!', len(GRID), 'GRID CELLS'))
 
@@ -40,7 +48,7 @@ def getCellData(lat, lon):
 
     # Find nearest cell
     for cell in GRID:
-        if lat > cell['lat'] - 0.25 and lat < cell['lat'] + 0.25 and lon > cell['lon'] - 0.25 and lon < cell['lon'] + 0.25:
+        if lat > cell['lat'] - STEP and lat < cell['lat'] + STEP and lon > cell['lon'] - STEP and lon < cell['lon'] + STEP:
             return cell
 
     # No cell
