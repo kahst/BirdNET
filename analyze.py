@@ -1,6 +1,7 @@
 import os
 import argparse
 import time
+import numpy as np
 
 import config as cfg
 from metadata import grid
@@ -101,7 +102,7 @@ def getRavenSelectionTable(p, path):
     stable = ''
 
     # Raven selection header
-    header = 'Selection\tView\tChannel\tBegin File\tBegin Time (s)\tEnd Time (s)\tLow Freq (Hz)\tHigh Freq (Hz)\tSpecies Code\tCommon Name\tConfidence\n'
+    header = 'Selection\tView\tChannel\tBegin File\tBegin Time (s)\tEnd Time (s)\tLow Freq (Hz)\tHigh Freq (Hz)\tSpecies Code\tCommon Name\tConfidence\tRank\n'
     selection_id = 0
 
     # Write header
@@ -112,12 +113,16 @@ def getRavenSelectionTable(p, path):
         rstring = ''
         start, end = decodeTimestamp(timestamp)
         min_conf = 0
+        rank = 1
         for c in p[timestamp]:
             if c[1] > cfg.MIN_CONFIDENCE + min_conf and c[0] in cfg.WHITE_LIST:
                 selection_id += 1
                 rstring += str(selection_id) + '\tSpectrogram 1\t1\t' + path + '\t'
                 rstring += str(start) + '\t' + str(end) + '\t' + str(cfg.SPEC_FMIN) + '\t' + str(cfg.SPEC_FMAX) + '\t'
-                rstring += getCode(c[0]) + '\t' + c[0].split('_')[1] + '\t' + str(c[1]) + '\n'
+                rstring += getCode(c[0]) + '\t' + c[0].split('_')[1] + '\t' + str(c[1]) + '\t' + str(rank) + '\n'
+                rank += 1
+            if rank > 3:
+                break
 
         # Write result string to file
         if len(rstring) > 0:
@@ -247,7 +252,9 @@ def main():
     parser.add_argument('--lon', type=float, default=-1, help='Recording location longitude. Set -1 to ignore.')
     parser.add_argument('--week', type=int, default=-1, help='Week of the year when the recordings were made. Values in [1, 48]. Set -1 to ignore.')
     parser.add_argument('--overlap', type=float, default=0.0, help='Overlap in seconds between extracted spectrograms. Values in [0.0, 2.9].')
+    parser.add_argument('--spp', type=int, default=1, help='Combines probabilities of multiple spectrograms to one prediction. Defaults to 1.')
     parser.add_argument('--sensitivity', type=float, default=1.0, help='Sigmoid sensitivity; Higher values result in lower sensitivity. Values in [0.25, 2.0]. Defaults to 1.0.')
+    parser.add_argument('--min_conf', type=float, default=0.1, help='Minimum confidence threshold. Values in [0.01, 0.99]. Defaults to 0.1.')
 
     args = parser.parse_args()
 
@@ -265,7 +272,9 @@ def main():
         cfg.DEPLOYMENT_LOCATION = (args.lat, args.lon)
         cfg.DEPLOYMENT_WEEK = args.week
         cfg.SPEC_OVERLAP = min(2.9, max(0.0, args.overlap))
+        cfg.SPECS_PER_PREDICTION = max(1, args.spp)
         cfg.SENSITIVITY = max(min(-0.25, args.sensitivity * -1), -2.0)
+        cfg.MIN_CONFIDENCE = min(0.99, max(0.01, args.min_conf))
         if len(args.o) == 0:
             if os.path.isfile(args.i):
                 result_path = args.i.rsplit(os.sep, 1)[0]
@@ -281,4 +290,3 @@ def main():
 if __name__ == '__main__':
 
     main()
-        
