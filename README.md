@@ -183,7 +183,9 @@ The input arguments include:
 --lon: Recording location longitude. Set -1 to ignore.
 --week: Week of the year when the recordings were made. Values in [1, 48]. Set -1 to ignore.
 --overlap: Overlap in seconds between extracted spectrograms. Values in [0.0, 2.9].
+--spp: Combines probabilities of multiple spectrograms to one prediction. Defaults to 1.
 --sensitivity: Sigmoid sensitivity; Higher values result in lower sensitivity. Values in [0.25, 2.0]. Defaults to 1.0.
+--min_conf: Minimum confidence threshold. Values in [0.01, 0.99]. Defaults to 0.1.'
 ```
 
 Output formats support Raven and Audacity, but both formats are text-based and machine-readable.
