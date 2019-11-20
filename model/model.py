@@ -47,7 +47,7 @@ def loadParams(net, params):
     
     return net
 
-def logmeanexp(x, axis=None, keepdims=False, sharpness=2):
+def logmeanexp(x, axis=None, keepdims=False, sharpness=5):
     # in between maximum (high sharpness) and mean (low sharpness)
     # https://arxiv.org/abs/1411.6228, Eq. 6
     # return T.log(T.mean(T.exp(sharpness * x), axis, keepdims=keepdims)) / sharpness
