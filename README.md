@@ -16,10 +16,12 @@ Please cite as:
 
 You can download the PDF here: [https://monarch.qucosa.de](https://nbn-resolving.org/urn:nbn:de:bsz:ch1-qucosa2-369869)
 
+For a list of supported species visit: [https://birdnet.cornell.edu/species-list/](https://birdnet.cornell.edu/species-list/)
+
 ## Introduction
 How can computers learn to recognize birds from sounds? The Cornell Lab of Ornithology and the Chemnitz University of Technology are trying to find an answer to this question. Our research is mainly focused on the detection and classification of avian sounds using machine learning – we want to assist experts and citizen scientist in their work of monitoring and protecting our birds.
 
-This repository provides the basic BirdNET recognition system to detect avian vocalizations in soundscape recordings.
+This repository provides the basic BirdNET recognition system to detect avian vocalizations in soundscape recordings. We also provide a list of files that were used for training and testing (filenames are indicative of the individual file IDs). See ```BirdNET_1000_Dataset.csv```for more details.
 
 <b>If you have any questions or problems running the scripts, don't hesitate to contact us.</b>
 
