@@ -18,6 +18,8 @@ You can download the PDF here: [https://monarch.qucosa.de](https://nbn-resolving
 
 For a list of supported species visit: [https://birdnet.cornell.edu/species-list/](https://birdnet.cornell.edu/species-list/)
 
+<b>Please also take a look at our newest repository:</b> [BirdNET for Tensorflow Lite](https://github.com/kahst/BirdNET-Lite)
+
 ## Introduction
 How can computers learn to recognize birds from sounds? The Cornell Lab of Ornithology and the Chemnitz University of Technology are trying to find an answer to this question. Our research is mainly focused on the detection and classification of avian sounds using machine learning – we want to assist experts and citizen scientist in their work of monitoring and protecting our birds.
 
