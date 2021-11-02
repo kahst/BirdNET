@@ -1,3 +1,5 @@
+[![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
+
 # BirdNET Soundscape Analysis
 By [Stefan Kahl](https://github.com/kahst), [Shyam Madhusudhana](https://www.birds.cornell.edu/brp/shyam-madhusudhana/), and [Holger Klinck](https://www.birds.cornell.edu/brp/holger-klinck/)
 
@@ -19,6 +21,12 @@ You can download the PDF here: [https://monarch.qucosa.de](https://nbn-resolving
 For a list of supported species visit: [https://birdnet.cornell.edu/species-list/](https://birdnet.cornell.edu/species-list/)
 
 <b>Please also take a look at our newest repository:</b> [BirdNET for Tensorflow Lite](https://github.com/kahst/BirdNET-Lite)
+
+This work is licensed under a
+[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
+
+[cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
+[cc-by-nc-sa-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
 
 ## Introduction
 How can computers learn to recognize birds from sounds? The Cornell Lab of Ornithology and the Chemnitz University of Technology are trying to find an answer to this question. Our research is mainly focused on the detection and classification of avian sounds using machine learning – we want to assist experts and citizen scientist in their work of monitoring and protecting our birds.
