@@ -39,8 +39,6 @@ Contact:  [Stefan Kahl](https://github.com/kahst), [Chemnitz University of Techn
 
 E-Mail: stefan.kahl@informatik.tu-chemnitz.de
 
-This project is licensed under the terms of the MIT license.
-
 ## Installation
 This is a Theano/Lasagne implementation in Python for the identification of hundreds of bird species based on their vocalizations. This code is tested using Ubuntu 18.04 LTS but should work with other distributions as well. Python 2 and 3 are supported. See <i>Installation (Docker)</i> to install BirdNET inside a docker container.
 
